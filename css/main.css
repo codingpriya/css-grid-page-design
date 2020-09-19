@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap");
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  font-family: 'Lato', sans-serif;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-gap: 10px;
+  grid-template-rows: repeat(auto, 5);
+  grid-template-areas: "sidebar" "header" "sect1" "sect2" "sect3" "main" "footer"; }
+
+body > * {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); }
+
+body, html {
+  height: 100vh; }
+
+aside {
+  grid-area: sidebar;
+  background-color: #0d93b1; }
+
+header {
+  grid-area: header;
+  background-color: #31d0ff; }
+
+section:nth-of-type(1) {
+  grid-area: sect1;
+  background-color: #44dede; }
+
+section:nth-of-type(2) {
+  grid-area: sect2;
+  background-color: #20c1c1; }
+
+section:nth-of-type(3) {
+  grid-area: sect3;
+  background-color: #139a9a; }
+
+main {
+  grid-area: main;
+  background-color: #95e0d9; }
+
+footer {
+  grid-area: footer;
+  background-color: #1f768a; }
+
+span {
+  text-transform: uppercase;
+  text-align: center;
+  display: block;
+  padding: 20px; }
+
+@media only screen and (min-width: 768px) {
+  body {
+    grid-template-columns: auto 26vw 26vw 26vw;
+    grid-template-rows: 8vw 18vw auto 8vw;
+    grid-template-areas: "sidebar header header header" "sidebar sect1 sect2 sect3" "sidebar main main main" "sidebar footer footer footer"; }
+
+  span {
+    font-size: calc(10px + 2vw); } }
+
+/*# sourceMappingURL=main.css.map */
